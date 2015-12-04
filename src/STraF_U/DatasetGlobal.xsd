@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetGlobal" targetNamespace="http://tempuri.org/DatasetGlobal.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetGlobal.xsd" xmlns:mstns="http://tempuri.org/DatasetGlobal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetGlobal" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Region">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Prof">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="shortname" type="xs:string" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+							<xs:element name="duration" type="xs:unsignedByte" minOccurs="0" default="4" />
+							<xs:element name="degree" type="xs:string" minOccurs="0" default="бакалаврын" />
+							<xs:element name="t1" type="xs:float" minOccurs="0" default="0" />
+							<xs:element name="t2" type="xs:float" minOccurs="0" default="0" />
+							<xs:element name="t3" type="xs:float" minOccurs="0" default="0" />
+							<xs:element name="t4" type="xs:float" minOccurs="0" default="0" />
+							<xs:element name="t5" type="xs:float" minOccurs="0" default="0" />
+							<xs:element name="t6" type="xs:float" minOccurs="0" default="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DatasetGlobalKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Region" />
+			<xs:field xpath="mstns:id" />
+		</xs:unique>
+		<xs:unique name="DatasetGlobalKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Prof" />
+			<xs:field xpath="mstns:shortname" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DataSetPoor" targetNamespace="http://www.tempuri.org/DataSetPoor.xsd" xmlns:mstns="http://www.tempuri.org/DataSetPoor.xsd" xmlns="http://www.tempuri.org/DataSetPoor.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="DataSetPoor" msdata:IsDataSet="true" msdata:Locale="mn-MN">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Poor" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="lname" type="xs:string" minOccurs="0" />
+							<xs:element name="fname" type="xs:string" />
+							<xs:element name="gender" type="xs:string" minOccurs="0" />
+							<xs:element name="pasno" type="xs:string" minOccurs="0" />
+							<xs:element name="regno" type="xs:string" />
+							<xs:element name="school" type="xs:int" />
+							<xs:element name="degree" type="xs:unsignedByte" minOccurs="0" />
+							<xs:element name="prof" type="xs:string" minOccurs="0" />
+							<xs:element name="grade" type="xs:unsignedByte" minOccurs="0" />
+							<xs:element name="gpa" type="xs:unsignedByte" minOccurs="0" />
+							<xs:element name="region" type="xs:int" minOccurs="0" />
+							<xs:element name="admisno" type="xs:string" minOccurs="0" />
+							<xs:element name="regdate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="enddate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="duration" type="xs:unsignedByte" minOccurs="0" />
+							<xs:element name="tuition" type="xs:float" minOccurs="0" />
+							<xs:element name="state" type="xs:unsignedByte" minOccurs="0" />
+							<xs:element name="note" type="xs:string" minOccurs="0" />
+							<xs:element name="family" type="xs:unsignedByte" minOccurs="0" />
+							<xs:element name="income" type="xs:float" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

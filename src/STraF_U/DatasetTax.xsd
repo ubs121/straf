@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetTax" targetNamespace="http://tempuri.org/DatasetTax.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetTax.xsd" xmlns:mstns="http://tempuri.org/DatasetTax.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetTax" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Tax">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="lname" type="xs:string" minOccurs="0" />
+							<xs:element name="fname" type="xs:string" minOccurs="0" />
+							<xs:element name="gender" type="xs:string" minOccurs="0" default="эр" />
+							<xs:element name="prof" type="xs:string" minOccurs="0" />
+							<xs:element name="grade" type="xs:unsignedByte" minOccurs="0" default="1" />
+							<xs:element name="gpa" type="xs:float" minOccurs="0" default="0" />
+							<xs:element name="region" type="xs:string" minOccurs="0" default="Улаанбаатар" />
+							<xs:element name="admisno" type="xs:string" minOccurs="0" />
+							<xs:element name="pasno" type="xs:string" minOccurs="0" />
+							<xs:element name="regno" type="xs:string" minOccurs="0" />
+							<xs:element name="pa_regno" type="xs:string" minOccurs="0" />
+							<xs:element name="ma_regno" type="xs:string" minOccurs="0" />
+							<xs:element name="contract" type="xs:string" minOccurs="0" default="эцэг" />
+							<xs:element name="name" type="xs:string" minOccurs="0" />
+							<xs:element name="org" type="xs:string" minOccurs="0" />
+							<xs:element name="pos" type="xs:string" minOccurs="0" />
+							<xs:element name="state" type="xs:unsignedByte" minOccurs="0" default="1" />
+							<xs:element name="note" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TaxTuition">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="stid" type="xs:int" />
+							<xs:element name="tdate" type="xs:dateTime" />
+							<xs:element name="tsize" type="xs:float" minOccurs="0" />
+							<xs:element name="tdesc" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="DatasetTaxKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Tax" />
+			<xs:field xpath="mstns:id" />
+		</xs:unique>
+		<xs:unique name="DatasetTaxKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:TaxTuition" />
+			<xs:field xpath="mstns:stid" />
+			<xs:field xpath="mstns:tdate" />
+		</xs:unique>
+		<xs:key name="key1">
+			<xs:selector xpath=".//mstns:TaxTuition" />
+			<xs:field xpath="mstns:stid" />
+		</xs:key>
+		<xs:keyref name="TaxTaxTuition" refer="DatasetTaxKey1">
+			<xs:selector xpath=".//mstns:TaxTuition" />
+			<xs:field xpath="mstns:stid" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

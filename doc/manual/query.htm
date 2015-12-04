@@ -1,0 +1,98 @@
+
+<html>
+<head>
+<title>Асуулга</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+
+<body bgcolor="#EFFEED">
+<p><font size="4"><strong>Асуулга.</strong></font> </p>
+<p align="justify">Асуулга гэдэг нь &oslash;г&oslash;гдлийн сангаас &oslash;г&oslash;гдлийг 
+  гарган авах командуудын цуглуулга юм. Програм дээр асуулгын цонхыг гаргахдаа 
+  <em><strong>Харах цэсний Асуулга</strong></em> (эсвэл гарнаас Ctrl + Shift + 
+  Q товчлуурын хослолыг ашиглаж болно) командыг сонгоно. Асуулгын командаа оруулаад 
+  <strong><em>Асуулга цэсний Харах</em></strong> командыг сонгож асуулгын vр дvнг 
+  харна.Асуулгын vр дvн нь хvснэгт хэлбэрээр харагдана. Тайлан гаргахад ашиглагдах 
+  асуулгын vндсэн команд нь <strong><em>Select</em></strong> юм.<br>
+  <em><strong>Select</strong> командыг дараах байдлаар хэрэглэнэ. </em><br>
+  <strong>Select</strong> талбар1, талбар2 ... <strong>from</strong> хvснэгт1, 
+  хvснэгт2 ... [<strong>where</strong> н&oslash;хц&oslash;л] [<strong>group by</strong> 
+  талбар1, талбар2, ...] [<strong>order by </strong>талбар1, талбар2, ...[<strong>asc</strong>|| 
+  <strong>desc</strong>]]<br>
+  Where - &oslash;г&oslash;гдлvvдийг н&oslash;хц&oslash;л&oslash;&oslash;р шvvх<br>
+  Group by &oslash;г&oslash;гдлvvдийг бvлэглэх<br>
+  Order by &oslash;г&oslash;гдлvvдийг эрэмбэлэх<br>
+  <br>
+  Жишээ 1: Т&oslash;рийн сангийн зээл ангилалаар суралцагч бvх оюутны нэрсийг 
+  авах. <br>
+  <font size="4">Select <em>fname</em> from <em>loan<br>
+  -------------------------------------------------------------------------<br>
+  </em></font>Vр дvнг:<br>
+  fname <br>
+  <font size="4"><em>- - - - - - - - - -<br>
+  Бат<br>
+  Болд<br>
+  Тамир<br>
+  Амар </em></font> <br>
+  <font size="4"><em>------------------------------------------------------------------------</em></font> 
+  <font size="4"><em><br>
+  </em></font>Жишээ 2: Т&oslash;рийн сангийн зээл ангилалаар суралцагч Улаанбаатарын 
+  харъяат бvх оюутны нэрсийг авах. <br>
+  <font size="4">Select <em>fname</em> from <em>loan </em>where<em> region='Улаанбаатар'</em></font><br>
+  <font size="4"><em>------------------------------------------------------------------------<br>
+  </em></font>Vр дvн:<br>
+  fname <br>
+  <font size="4"><em>- - - - - - - - - -<br>
+  Болд<br>
+  Амар <br>
+  </em></font> <font size="4"><em>------------------------------------------------------------------------</em></font><br>
+  Жишээ 3: Т&oslash;рийн сангийн зээл ангилалаар суралцагчдыг голч дvнгээр нь 
+  буурахаар эрэмблэж нэр, голч дvнг нь харах.<br>
+  <font size="4">Select <em>fname, gpa </em> from <em>loan </em>where<em> </em>order 
+  by<em> gpa </em>desc<br>
+  <em>------------------------------------------------------------------------</em></font></p>
+<table width="57%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="38%" height="124" valign="top">
+<p>Vр дvн:<br>
+        Fname <br>
+        <font size="4"><em>- - - - - <br>
+        Тамир <br>
+        Болд <br>
+        Ганболд</em></font></p>
+      </td>
+    <td width="62%" valign="top"><p><br>
+        Gpa<br>
+        <font size="4"><em>- - - - - <br>
+        95<br>
+        92<br>
+        85 </em></font> </p></td>
+  </tr>
+</table>
+<p align="justify">Жишээ 4: Т&oslash;рийн сангийн зээл ангилалаар суралцагчдын 
+  тоог аймаг бvрээр бvлэглэж харах..<br>
+  <font size="4">Select <em>region,</em> count(id) as total from <em>loan </em>group 
+  by <em> region</em></font> <br>
+  <font size="4"><em>-----------------------------------------------------------------------</em></font></p>
+<table width="57%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="38%" valign="top">Vр дvн:<br>
+      Region <br>
+      <font size="4"><em>- - - - - <br>
+      Архангай <br>
+      Ховд<br>
+      Булган </em></font></td>
+    <td width="62%" valign="top"><p><br>
+        Total<br>
+        <font size="4"><em>- - - - - <br>
+        20 <br>
+        23<br>
+        26 </em></font> </p>
+      </td>
+  </tr>
+</table>
+<p align="justify"><font size="4"><em> </em></font> <font size="4"><em>----------------------------</em></font><font size="4"><em>--------------------------------------------</em></font> 
+</p>
+  </body>
+</html>
+
